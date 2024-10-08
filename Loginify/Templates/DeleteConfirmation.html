@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f8f9fa, #e0e0e0);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-container {
+    width: 400px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+input[type="submit"] {
+    padding: 12px 30px;
+    background-color: #ff514b;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #ed0c04;
+    color: #000;
+    font-weight: bold;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #4285f4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0a65c2;
+}
+</style>
+</head>
+<body>
+
+<div class="delete-container">
+    <h2>Do you want to delete it <strong>{{ user.username }}</strong>?</h2>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Confirm Delete">&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;<a href="{% url 'AllUsers' %}">Cancel</a>
+    </form>
+</div>
+
+</body>
+</html>
