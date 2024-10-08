@@ -29,7 +29,7 @@ DB_NAME=your_db_name
 DB_USER=your_db_user
 DB_PASSWORD=your_db_password
 
-. Apply database migrations
+5. Apply database migrations
 Run the following command to set up the database:
 
 bash
