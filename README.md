@@ -28,16 +28,19 @@ DEBUG=True
 DB_NAME=your_db_name
 DB_USER=your_db_user
 DB_PASSWORD=your_db_password
-5. Apply database migrations
+
+. Apply database migrations
 Run the following command to set up the database:
 
 bash
 python manage.py migrate
+
 6. Create a superuser (optional)
 To create an admin account for the Django admin interface:
 
 bash
 python manage.py createsuperuser
+
 7. Run the development server
 bash
 python manage.py runserver
